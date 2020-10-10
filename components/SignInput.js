@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View, backGround } from 'react-native';
 
 export default ({ IconSvg, placeholder, value, change, password }) => {
-    const [tex, setTex] = useState('');
+    const [text, setText] = useState('');
 
     return (
         <View style={styles.InputArea}>
+            
             {IconSvg}
             <TextInput
                 placeholder={placeholder}
@@ -21,19 +22,19 @@ export default ({ IconSvg, placeholder, value, change, password }) => {
 
 const styles = StyleSheet.create({
     InputArea: {
-        width: "100%",
-        height: "60px",
+        flex: 1,
+        
         backgroundColor: "#FFF",
         flexDirection: "row",
         borderRadius: "30px",
         paddingLeft: "15px",
         alignItems: "center",
-        marginBottom: "15px"
+        marginBottom: "40px"
     },
     Input: {
         flex: 1,
         fontSize: "16px",
-        color: "268596",
-        marginLeft: "10px"
+        color: "#268596",
+        margin: "center"
     }
 });

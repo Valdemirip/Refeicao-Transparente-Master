@@ -11,7 +11,7 @@ import {
 
 } from './styles';
 
-import EmpresaInput from '../../components/SignInput';
+import SignInput from '../../components/SignInput';
 import refTransLogo from '../../assets/Logo.svg';
 
 
@@ -26,7 +26,7 @@ export default function EmpresaScreen () {
     const [emailField, setEmaillField] = useState('');
     const [telefoneField, setTelefoneField] = useState('');
 
-    const handleProdutoClick = () => {
+    const handleSignInClick = () => {
 
     }
     
@@ -43,21 +43,21 @@ export default function EmpresaScreen () {
 
             <InputArea>
 
-                <EmpresaInput
+                <SignInput
                     
                             placeholder="Nome fantasia"
                             value={nomeField}
                             onChangeText={t=>setNomeField(t)}
                 />
 
-                <EmpresaInput
+                <SignInput
                     
                             placeholder="CNPJ"
                             value={cnpjField}
                             onChangeText={t=>setCnpjField(t)}
                 />
 
-                <EmpresaInput
+                <SignInput
                      
                             placeholder="Endereço"
                             value={enderecoField}
@@ -65,27 +65,23 @@ export default function EmpresaScreen () {
                      
                 />
                 
-                <EmpresaInput
+                <SignInput
                     
                             placeholder="Cidade"
                             value={cidadeField}
                             onChangeText={t=>setCidadeField(t)}
                 />
 
-                <EmpresaInput
+                <SignInput
                     
                             placeholder="E-mail"
                             value={emailField}
                             onChangeText={t=>setEmailField(t)}
                 />
 
-                <EmpresaInput    
-                            placeholder="E-mail"
-                            value={telefoneField}
-                            onChangeText={t=>setTelefoneField(t)}
-                        />
+                
 
-                <CustomButton onPress={handleProdutoClick}>
+                <CustomButton onPress={handleSignInClick}>
                     <CustomButtonText>CADASTRAR</CustomButtonText>
                 </CustomButton>
             </InputArea>
